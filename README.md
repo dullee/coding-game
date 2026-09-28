@@ -2,6 +2,8 @@
 
 A web coding game: each challenge shows a **reference page** (its rendered output and its HTML/JS source). You rebuild the same output in a live editor, and the game scores how close you got, flags errors and flaws as you type, and shows better ways to write it.
 
+**Play it live: https://coding-game-pi-eight.vercel.app**
+
 ## Run it
 
 ```bash
@@ -17,7 +19,7 @@ The game itself works without any configuration. Accounts, the leaderboard and A
 |---|---|---|
 | `DATABASE_URL` | scores, leaderboard, accounts | Neon Postgres connection string |
 | `AUTH_SECRET` | sign-in | `npx auth secret` |
-| `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` | sign-in | GitHub → Settings → Developer settings → OAuth Apps → New. Callback URL: `http://localhost:3000/api/auth/callback/github` |
+| `AUTH_GITHUB_ID` / `AUTH_GITHUB_SECRET` | sign-in | GitHub → Settings → Developer settings → OAuth Apps → New. Callback URL: `http://localhost:3000/api/auth/callback/github` locally, or `https://coding-game-pi-eight.vercel.app/api/auth/callback/github` for the live site |
 | `ANTHROPIC_API_KEY` | "Ask AI for review" (Claude Haiku 4.5, 20 reviews/user/day) | console.anthropic.com |
 
 ## How scoring works (0–1000 pts)
